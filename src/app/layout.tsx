@@ -7,9 +7,9 @@ import type React from "react" // Added import for React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AutoRug - Simplify Your Workflow",
+  title: "AutoRug",
   description:
-    "AutoRug is a powerful SaaS platform designed to streamline your business processes and boost productivity.",
+    "AutoRug is a powerful platform designed to streamline your Memecoin projects and boost productivity.",
 }
 
 export default function RootLayout({
@@ -19,6 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <meta name="robots" content="noindex, nofollow" />
+      <meta name="googlebot" content="noindex, nofollow" />
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}

@@ -9,10 +9,9 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AutoRug - Simplify Your Workflow",
+  title: "AutoRug",
   description:
-    "AutoRug is a powerful SaaS platform designed to streamline your business processes and boost productivity.",
-    generator: 'v0.dev'
+    "AutoRug is a powerful platform designed to streamline your Memecoin projects and boost productivity.",
 }
 
 export default function RootLayout({
