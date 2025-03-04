@@ -52,7 +52,7 @@ export default function AuthModal({ isOpen, onClose, mode }: AuthModalProps) {
           variant: "success",
         })
         onClose()
-        router.push("/dashboard")
+        router.push("/onboarding")
       } else {
         toast({
           title: "Login failed",
@@ -96,7 +96,7 @@ export default function AuthModal({ isOpen, onClose, mode }: AuthModalProps) {
           variant: "success",
         })
         onClose()
-        router.push("/dashboard")
+        router.push("/onboarding")
       } else {
         toast({
           title: "Registration failed",
@@ -186,17 +186,6 @@ export default function AuthModal({ isOpen, onClose, mode }: AuthModalProps) {
               ) : (
                 <form onSubmit={handleRegisterSubmit}>
                   <div className="grid gap-4 py-2">
-                    <div className="grid gap-2">
-                      <Label htmlFor="register-name">Name (Optional)</Label>
-                      <Input
-                        id="register-name"
-                        type="text"
-                        placeholder="John Doe"
-                        value={registerData.name}
-                        onChange={(e) => setRegisterData({ ...registerData, name: e.target.value })}
-                        className="border-input/60 focus-visible:ring-primary/70"
-                      />
-                    </div>
                     <div className="grid gap-2">
                       <Label htmlFor="register-username">Username</Label>
                       <Input
