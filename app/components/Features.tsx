@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const features = [
   {
     name: "Lightning Fast",
-    description: "Our platform is optimized for speed, ensuring quick load times and responsive interactions.",
+    description: "Our platform is optimized for speed, ensuring quick transaction times.",
     icon: Zap,
   },
   {
@@ -15,8 +15,8 @@ const features = [
     icon: Layers,
   },
   {
-    name: "Team Collaboration",
-    description: "Seamlessly work together with your team members in real-time.",
+    name: "Real Time Management",
+    description: "Seamlessly manage your memecoin projects and control liquidity from your bundled wallets.",
     icon: Users,
   },
   {
@@ -75,7 +75,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Everything you need to streamline your workflow
+            Everything you need to streamline your Memecoin projects.
           </motion.p>
           <motion.p
             className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto"

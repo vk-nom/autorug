@@ -14,8 +14,8 @@ export default function CTA() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <span className="block">Ready to streamline your workflow?</span>
-          <span className="block mt-2">Start your free trial today.</span>
+          <span className="block">Ready to unleash your creativity?</span>
+          <span className="block mt-2">Start your first coin today.</span>
         </motion.h2>
         <motion.p
           className="mt-4 text-lg leading-6 text-primary-foreground/90"
@@ -24,7 +24,7 @@ export default function CTA() {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Join thousands of satisfied customers who have transformed their business with AutoRug.
+          Join hundreds of satisfied customers who have transformed their Memecoin projects with AutoRug.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function CTA() {
           viewport={{ once: true }}
         >
           <Button size="lg" variant="secondary" className="mt-8 bg-background text-primary hover:bg-secondary/90">
-            Get started for free
+            Register
           </Button>
         </motion.div>
       </div>

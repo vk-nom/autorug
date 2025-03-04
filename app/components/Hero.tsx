@@ -35,7 +35,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Easily Launch and Rug
+              Easily Launch and Manage
             </motion.span>
             <motion.span
               className="text-foreground"
@@ -43,7 +43,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              with AutoRug
+              Memecoins with AutoRug
             </motion.span>
           </h1>
           <motion.p
@@ -52,7 +52,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Boost productivity and streamline your memecoin processes with our powerful platform.
+            Boost productivity and streamline your memecoin projects with our powerful platform.
           </motion.p>
           <motion.div
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
@@ -64,7 +64,7 @@ export default function Hero() {
               Login
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={openRegisterModal}>
-              Join Us!
+              Register
             </Button>
           </motion.div>
         </motion.div>

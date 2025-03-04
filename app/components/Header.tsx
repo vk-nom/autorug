@@ -33,7 +33,7 @@ export default function Header() {
             <Button variant="outline" className="hidden sm:inline-flex" onClick={openLoginModal}>
               Login
             </Button>
-            <Button onClick={openRegisterModal}>Join Us!</Button>
+            <Button onClick={openRegisterModal}>Register</Button>
           </div>
         </div>
       </div>
