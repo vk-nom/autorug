@@ -122,7 +122,7 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
                 )}
               </div>
             ) : (
-              <button onClick={openModal} className="connect-wallet btn">Connect Wallet</button>
+              <button onClick={openModal} className="connect-wallet btn"><Button>Connect Wallet</Button></button>
             )}
           </div>
 

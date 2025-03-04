@@ -17,7 +17,8 @@ export default function Home() {
         <Pricing />
         <CTA />
       </main>
-      <Footer />
+      <Footer /> 
+      
     </div>
   )
 }
