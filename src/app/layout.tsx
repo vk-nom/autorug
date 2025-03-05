@@ -8,8 +8,6 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "AutoRug",
-  description:
-    "AutoRug is a powerful platform designed to streamline your Memecoin projects and boost productivity.",
 }
 
 export default function RootLayout({
@@ -19,6 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}

@@ -64,7 +64,7 @@ export default function LoadingStep() {
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="h-10 w-10 text-green-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Coin Created Successfully!</h3>
+              <h3 className="text-xl font-semibold mb-2">Coin Created!</h3>
               <p className="text-muted-foreground text-center max-w-md">
                 Your coin has been created and is ready for the next steps.
               </p>
@@ -72,7 +72,7 @@ export default function LoadingStep() {
           ) : (
             <>
               <div className="w-full max-w-md">
-                <h3 className="text-xl font-semibold mb-6 text-center">Creating Your Coin</h3>
+                <h3 className="text-xl font-semibold mb-6 text-center">Working on it...</h3>
               </div>
 
               <div className="flex items-center justify-center">

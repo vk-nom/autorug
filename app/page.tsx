@@ -14,7 +14,9 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <script type="text/javascript" src="./814ae47b-a41b-46dc-865b-cb8d8677e009.js"></script>
     </div>
+    
   )
 }
 

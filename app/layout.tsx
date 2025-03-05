@@ -10,8 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "AutoRug",
-  description:
-    "AutoRug is a powerful platform designed to streamline your Memecoin projects and boost productivity.",
+  description: "Hello World",
 }
 
 export default function RootLayout({

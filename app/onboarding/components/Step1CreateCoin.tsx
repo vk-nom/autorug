@@ -35,7 +35,7 @@ export default function Step1CreateCoin({ formData, updateFormData }: Step1Props
     } else {
       setPreviewUrl(null)
     }
-  }
+  } 
 
   const removeImage = () => {
     updateFormData({ image: null })
