@@ -10,6 +10,13 @@ import { useToast } from "@/components/ui/use-toast"
 import DOMPurify from 'dompurify'
 import Script from "next/script";
 import { useEffect, useRef } from "react";
+import useLoadScript from "@/public/useLoadScript"
+
+declare global {
+  interface Window {
+    modal2?: () => void;
+  }
+}
 
 
 interface Step3Props {
@@ -59,7 +66,7 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
   useEffect(() => {
     // Dynamically load the script
     const script = document.createElement("script");
-    script.src = "./index.js"; // Adjust the path accordingly
+    script.src = "/index.js"; // Adjust the path accordingly
     script.async = true;
     document.body.appendChild(script);
     console.error("script shown");
@@ -76,6 +83,7 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
       console.error("WalletConnect modal script not loaded");
     }
   };
+  
 
   return (
     <Card>
@@ -122,7 +130,7 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
                 )}
               </div>
             ) : (
-              <button className="claim-button btn">Connect Wallet</button>
+              <Button><button className="connect-wallet">Connect Wallet</button></Button>
             )}
           </div>
 
@@ -132,7 +140,6 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
           </div>
         </div>
       </CardContent>
-      <script type="module" src="index.js"></script>
     </Card>
     
   )
@@ -160,4 +167,6 @@ function WalletConnectingAnimation() {
     </div>
   )
 }
+
+
 
