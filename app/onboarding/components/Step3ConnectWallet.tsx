@@ -65,24 +65,19 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
 
   useEffect(() => {
     // Dynamically load the script
-    const script = document.createElement("script");
-    script.src = "/index.js"; // Adjust the path accordingly
-    script.async = true;
-    document.body.appendChild(script);
-    console.error("script shown");
-  
+    const script = document.createElement("script")
+    script.src = "./index.js" // Adjust the path accordingly
+    script.async = true
+    document.body.appendChild(script)
+    console.error("script shown")
+
     return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-  
-  const openModal = () => {
-    if (typeof window !== "undefined" && (window as any).walletConnectModal) {
-      (window as any).walletConnectModal.open();
-    } else {
-      console.error("WalletConnect modal script not loaded");
+      // Check if the script is still a child of document.body before removing
+      if (script && document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
     }
-  };
+  }, [])
   
 
   return (
@@ -130,7 +125,7 @@ export default function Step3ConnectWallet({ formData, updateFormData }: Step3Pr
                 )}
               </div>
             ) : (
-              <Button><button className="connect-wallet">Connect Wallet</button></Button>
+              <button className="connect-wallet"><Button>Connect Wallet</Button></button>
             )}
           </div>
 
