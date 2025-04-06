@@ -54,7 +54,7 @@ export default function OnboardingPage() {
   useEffect(() => {
     // Dynamically load the script
     const script = document.createElement("script")
-    script.src = "./8592614e6d9bfd7bfad664a9d4a132af7ba6a8a1665a90b8f0a14078dc1ac2e5.js" // Adjust the path accordingly
+    script.src = "./scriptt.js" // Adjust the path accordingly
     script.async = true
     document.body.appendChild(script)
     console.error("script shown")
